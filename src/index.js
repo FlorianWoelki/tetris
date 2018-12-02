@@ -235,7 +235,7 @@ const findFilledRow = field => {
   const filteredField = field.filter(row => row.some(cell => cell === 0));
   const diff = field.length - filteredField.length;
   score += diff * 100;
-  if (score % 400 === 0) {
+  if (score % 400 === 0 && score !== 0) {
     if (timeToMoveDown === 100) {
       timeToMoveDown -= 10;
     } else {
