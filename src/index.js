@@ -136,8 +136,8 @@ const drawField = (field, ctx) => {
 
 const { requestAnimationFrame } = window;
 
-const fps = 100;
-const timeToMoveDown = 500;
+const fps = 120;
+let timeToMoveDown = 500;
 let counterOfF = 0;
 let prevTime = 0;
 let prevPosition = { x: 0, y: 0 };
@@ -235,6 +235,14 @@ const findFilledRow = field => {
   const filteredField = field.filter(row => row.some(cell => cell === 0));
   const diff = field.length - filteredField.length;
   score += diff * 100;
+  if (score % 400 === 0) {
+    if (timeToMoveDown === 100) {
+      timeToMoveDown -= 10;
+    } else {
+      timeToMoveDown -= 100;
+    }
+    console.log(timeToMoveDown);
+  }
   updateScore(score);
   const filledArr = generateField(diff, numberOfCols);
   return [...filledArr, ...filteredField];
