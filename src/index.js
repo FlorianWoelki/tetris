@@ -20,13 +20,13 @@ const oType = [[6, 6], [6, 6]];
 const tType = [[0, 7, 0], [7, 7, 7], [0, 0, 0]];
 
 const blockColors = [
-  'limegreen',
-  'darkorange',
-  'mediumorchid',
-  'dodgerblue',
-  'orangered',
-  'cornflowerblue',
-  'tomato'
+  '#27ae60',
+  '#d35400',
+  '#8e44ad',
+  '#2980b9',
+  '#c0392b',
+  '#f39c12',
+  '#2c3e50'
 ];
 
 const blockTypes = {
